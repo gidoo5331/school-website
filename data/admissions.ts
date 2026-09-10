@@ -1,0 +1,101 @@
+// Content sourced from the 2026/2027 prospectus.
+export const admissions = {
+  process: [
+    {
+      step: 1,
+      title: "Check Your Placement",
+      description:
+        "Placement to Obama College is through the Computerised School Selection and Placement System (CSSPS). Check your results and placement on the CSSPS portal.",
+    },
+    {
+      step: 2,
+      title: "Accept the Placement",
+      description:
+        "Confirm your placement online, or use the self-placement option if you were not automatically placed and there is space.",
+    },
+    {
+      step: 3,
+      title: "Download the Prospectus",
+      description:
+        "Download and read the prospectus for your year group (SHS 1, 2, or 3). It lists every document, uniform, and personal item to bring.",
+    },
+    {
+      step: 4,
+      title: "Report to School",
+      description:
+        "Fresh learners report between 18th and 20th September 2026 with all required items. Each item must be clearly embossed with the learner's name.",
+    },
+  ],
+  requirements: [
+    "Photocopy of BECE results slip",
+    "Photocopy of birth certificate",
+    "Photocopy of Ghana Card",
+    "Photocopy of NHIS card",
+    "CSSPS placement / self-placement confirmation",
+    "Personal and boarding items as listed in the prospectus",
+  ],
+  freeShs: [
+    "School uniform and outing dress",
+    "Textbooks and a tablet",
+    "Tuition fees",
+    "One hot meal a day (Monday – Friday)",
+    "House jersey and cardigan",
+    "Final-year WASSCE registration fees",
+  ],
+  optionalServices: [
+    { service: "Accommodation (boarding)", fee: "GH₵500.00 per semester" },
+    { service: "Campus feeding — SHS 1 & 2 (breakfast & supper, Mon–Sun)", fee: "GH₵15.00 per day" },
+    { service: "Campus feeding — SHS 3 boarders", fee: "GH₵20.00 per day" },
+  ],
+  continuingStudentFees: {
+    note: "SHS 3 learners on the pre–Free SHS fee structure for the 2026/2027 academic year. At least GH₵5,000.00 is due before registration, with the balance by 31st March 2027.",
+    rows: [
+      { programme: "General Arts & Business", day: "GH₵8,000.00", hostel: "GH₵9,000.00" },
+      { programme: "General Science, Home Economics & Visual Arts", day: "GH₵9,000.00", hostel: "GH₵10,000.00" },
+    ],
+  },
+  downloads: [
+    {
+      title: "SHS 1 Prospectus — 2026/2027",
+      description: "Free SHS benefits, student supply list, and boarding items for fresh learners.",
+      href: "/prospectus/obama-college-shs1-prospectus-2026-2027.pdf",
+    },
+    {
+      title: "SHS 2 Prospectus — 2026/2027",
+      description: "Supply and boarding item list for continuing SHS 2 learners.",
+      href: "/prospectus/obama-college-shs2-prospectus-2026-2027.pdf",
+    },
+    {
+      title: "SHS 3 Prospectus — 2026/2027",
+      description: "Supply list, boarding items, fees, and payment bank details for SHS 3 learners.",
+      href: "/prospectus/obama-college-shs3-prospectus-2026-2027.pdf",
+    },
+  ],
+  keyDates: [
+    { label: "Fresh learners report", value: "18th – 20th September 2026" },
+    { label: "Special P.T.A. meeting for freshers", value: "Saturday, 24th October 2026" },
+    { label: "SHS 3 fee balance due", value: "31st March 2027" },
+  ],
+  faqs: [
+    {
+      question: "How do I get admitted to Obama College?",
+      answer:
+        "Admission is through the CSSPS. Once placed, accept your placement online and report on the dates in the prospectus with all required items.",
+    },
+    {
+      question: "Is Obama College a Free SHS school?",
+      answer:
+        "Yes. Uniforms, textbooks, a tablet, tuition, a daily hot meal, and WASSCE registration are covered for every learner. Boarding and campus feeding are optional paid services.",
+    },
+    {
+      question: "Do fresh learners sit an entrance exam?",
+      answer:
+        "No entrance exam. All fresh learners undergo a medical examination at a fee after reporting.",
+    },
+    {
+      question: "What items must learners bring?",
+      answer:
+        "The prospectus for each year group lists every document, uniform, and boarding item. All items must be embossed with the learner's name. Mobile phones and unprescribed items are not allowed.",
+    },
+  ],
+} as const;

@@ -1,0 +1,31 @@
+// Placeholder articles — replace with real Senior High School news once provided.
+import type { NewsArticle } from "@/types/news";
+
+export const seniorHighNews: NewsArticle[] = [
+  {
+    id: "shs-news-1",
+    slug: "shs-mock-wassce-begins",
+    title: "SHS Third-Year Students Begin Mock WASSCE",
+    imageCategory: "Classrooms",
+    summary:
+      "Final-year students began a two-week mock WASSCE examination series to prepare for the national exams.",
+    body:
+      "Final-year students began a two-week mock WASSCE examination series designed to prepare them for the national exams, with subject teachers providing revision support throughout.",
+    author: "Obama College, Mankessim",
+    category: "Academics",
+    publishedAt: "2026-02-02",
+  },
+  {
+    id: "shs-news-2",
+    slug: "shs-computer-lab-upgrade",
+    title: "Senior High School Computer Laboratory Upgraded",
+    imageCategory: "Computer Lab",
+    summary:
+      "The school's ICT development initiative continued with new equipment installed in the computer laboratory.",
+    body:
+      "As part of ongoing ICT development initiatives, the school's computer laboratory received new equipment, expanding access to computing lessons for students across all programmes.",
+    author: "Obama College, Mankessim",
+    category: "School News",
+    publishedAt: "2025-10-15",
+  },
+];
