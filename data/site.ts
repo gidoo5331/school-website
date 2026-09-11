@@ -12,6 +12,8 @@ export const site = {
   contact: {
     address: "Obama College, Mankessim, Central Region, Ghana",
     phones: ["0540 901303"],
+    // wa.me requires the full international number, no leading zero or symbols.
+    whatsapp: "233540901303",
     email: "info@obamacollege.edu.gh",
     officeHours: "Monday – Friday, 8:00am – 4:00pm",
   },
