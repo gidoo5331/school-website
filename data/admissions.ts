@@ -65,11 +65,11 @@ export const admissions = {
       description: "Supply and boarding item list for continuing SHS 2 learners.",
       href: "/prospectus/obama-college-shs2-prospectus-2026-2027.pdf",
     },
-    {
-      title: "SHS 3 Prospectus — 2026/2027",
-      description: "Supply list, boarding items, fees, and payment bank details for SHS 3 learners.",
-      href: "/prospectus/obama-college-shs3-prospectus-2026-2027.pdf",
-    },
+    // {
+    //   title: "SHS 3 Prospectus — 2026/2027",
+    //   description: "Supply list, boarding items, fees, and payment bank details for SHS 3 learners.",
+    //   href: "/prospectus/obama-college-shs3-prospectus-2026-2027.pdf",
+    // },
   ],
   keyDates: [
     { label: "Fresh learners report", value: "18th – 20th September 2026" },
