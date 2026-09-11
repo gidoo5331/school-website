@@ -484,43 +484,26 @@ Shared
 
 # Color Palette
 
-Primary
+Taken from the school crest. Defined as CSS variables in `app/globals.css`
+(`:root` for light, `.dark` for dark). Use the semantic Tailwind tokens
+(`bg-primary`, `text-secondary`, `text-gold`, `bg-muted`, …) — never hardcode
+these hexes in components.
 
-Deep Blue
+| Role | Token | Light | Use |
+|---|---|---|---|
+| Primary | `primary` | `#182f6e` navy | Headings, links, dark sections (hero, footer, testimonials), structure |
+| Secondary / accent | `secondary` | `#c21b2c` red | Calls to action, section kickers, active nav underline, emphasis |
+| Supporting | `gold` | `#d9a017` | Small accents **on navy only** (kickers, rules, footer marks) |
+| Page surface | `background` | `#fafbfd` | Body |
+| Section band | `muted` | `#eef1f8` | Alternating section backgrounds, page headers |
+| Text | `foreground` | `#101a33` | Body copy (navy-black) |
+| Muted text | `muted-foreground` | `#4d566e` | Secondary copy |
+| Border | `border` | `#e0e4f0` | Card rings, dividers |
+| Success | `success` | `#15803d` | Checklist ticks |
+| Error | `destructive` | `#dc2626` | Form errors |
 
-```
-#1E3A8A
-```
-
-Secondary
-
-Gold
-
-```
-#FBBF24
-```
-
-Neutral
-
-```
-White
-
-Slate
-
-Gray
-```
-
-Success
-
-```
-#16A34A
-```
-
-Error
-
-```
-#DC2626
-```
+The header carries a thin navy → red → gold rule as a brand signature.
+Section kickers use the `.eyebrow` / `.eyebrow-on-dark` component classes.
 
 ---
 

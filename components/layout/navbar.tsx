@@ -30,14 +30,17 @@ function isGroupActive(pathname: string, item: NavItem) {
 
 const linkClass = (active: boolean) =>
   cn(
-    "rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground",
-    active ? "text-primary" : "text-muted-foreground",
+    "relative rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
+    "after:absolute after:inset-x-3 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-secondary after:transition-transform after:duration-200",
+    active
+      ? "text-primary after:scale-x-100"
+      : "text-muted-foreground after:scale-x-0 hover:after:scale-x-100",
   );
 
 function DesktopNav({ pathname }: { pathname: string }) {
   return (
     <nav aria-label="Primary" className="hidden md:block">
-      <ul className="flex items-center gap-1">
+      <ul className="flex items-center gap-0.5">
         {navigation.map((item) =>
           item.children ? (
             <li key={item.href}>
@@ -52,7 +55,7 @@ function DesktopNav({ pathname }: { pathname: string }) {
                   <ChevronDown className="size-3.5" aria-hidden="true" />
                 </Menu.Trigger>
                 <Menu.Portal>
-                  <Menu.Positioner sideOffset={8} align="start" className="z-50">
+                  <Menu.Positioner sideOffset={10} align="start" className="z-50">
                     <Menu.Popup className="min-w-44 rounded-lg bg-popover p-1 text-popover-foreground shadow-lg ring-1 ring-border outline-none">
                       {item.children.map((child) => (
                         <Menu.Item
@@ -97,7 +100,9 @@ function MobileNav({ pathname }: { pathname: string }) {
             render={<Link href={item.href} />}
             className={cn(
               "block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted",
-              isActive(pathname, item.href) ? "text-primary" : "text-foreground",
+              isActive(pathname, item.href)
+                ? "border-l-2 border-secondary text-primary"
+                : "text-foreground",
             )}
           >
             {item.label}
@@ -122,7 +127,10 @@ function MobileNav({ pathname }: { pathname: string }) {
           )}
         </div>
       ))}
-      <Button render={<Link href="/admissions" />} className="mt-3">
+      <Button
+        render={<Link href="/admissions" />}
+        className="mt-3 h-10 bg-secondary text-secondary-foreground hover:bg-secondary/90"
+      >
         Apply Now
       </Button>
     </nav>
@@ -133,26 +141,31 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur before:block before:h-0.75 before:w-full before:bg-linear-to-r before:from-primary before:via-secondary before:to-gold before:content-[''] supports-backdrop-filter:bg-background/75">
+      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.jpeg"
             alt=""
-            width={36}
-            height={36}
-            className="size-9 rounded-md"
+            width={44}
+            height={44}
+            className="size-11 rounded-lg ring-1 ring-border"
             priority
           />
           <span className="font-heading text-lg leading-tight font-semibold text-primary">
             {site.name}
-            <span className="block text-xs font-medium text-muted-foreground">Mankessim</span>
+            <span className="block text-[0.7rem] font-semibold tracking-[0.14em] text-secondary uppercase">
+              Mankessim
+            </span>
           </span>
         </Link>
 
         <DesktopNav pathname={pathname} />
 
-        <Button render={<Link href="/admissions" />} className="hidden md:inline-flex">
+        <Button
+          render={<Link href="/admissions" />}
+          className="hidden h-10 bg-secondary px-5 text-secondary-foreground hover:bg-secondary/90 md:inline-flex"
+        >
           Apply Now
         </Button>
 

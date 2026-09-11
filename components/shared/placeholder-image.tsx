@@ -12,7 +12,7 @@ export function PlaceholderImage({ category, className }: PlaceholderImageProps)
       role="img"
       aria-label={`Placeholder image: ${category}`}
       className={cn(
-        "relative flex h-full w-full items-center justify-center overflow-hidden bg-gradient-to-br from-primary/15 via-secondary/10 to-primary/25",
+        "relative flex h-full w-full items-center justify-center overflow-hidden bg-linear-to-br from-primary/12 via-primary/5 to-primary/20",
         className,
       )}
     >

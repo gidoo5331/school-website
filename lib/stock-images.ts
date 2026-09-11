@@ -6,7 +6,8 @@
 export const stockImages: Record<string, string> = {
   Campus: "/images/campus-classroom-block.jpg",
   "Administration Block": "/images/campus-classroom-block.jpg",
-  Classrooms: "/images/campus-classroom-block.jpg",
+  Classrooms:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/20161010_4889B_ESBAMA_Classroom.jpg/1280px-20161010_4889B_ESBAMA_Classroom.jpg",
   Students: "/images/students-group.jpg",
   Teachers:
     "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/African_teacher.jpg/1280px-African_teacher.jpg",
