@@ -45,7 +45,7 @@ export const admissions = {
   optionalServices: [
     { service: "Accommodation (boarding)", fee: "GH₵500.00 per semester" },
     { service: "Campus feeding — SHS 1 & 2 (breakfast & supper, Mon–Sun)", fee: "GH₵15.00 per day" },
-    { service: "Campus feeding — SHS 3 boarders", fee: "GH₵20.00 per day" },
+    // { service: "Campus feeding — SHS 3 boarders", fee: "GH₵20.00 per day" },
   ],
   continuingStudentFees: {
     note: "SHS 3 learners on the pre–Free SHS fee structure for the 2026/2027 academic year. At least GH₵5,000.00 is due before registration, with the balance by 31st March 2027.",
@@ -74,7 +74,7 @@ export const admissions = {
   keyDates: [
     { label: "Fresh learners report", value: "18th – 20th September 2026" },
     { label: "Special P.T.A. meeting for freshers", value: "Saturday, 24th October 2026" },
-    { label: "SHS 3 fee balance due", value: "31st March 2027" },
+    // { label: "SHS 3 fee balance due", value: "31st March 2027" },
   ],
   faqs: [
     {
