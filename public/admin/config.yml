@@ -86,3 +86,24 @@ collections:
           - { label: "Graduation", name: "Graduation", widget: "image" }
           - { label: "School Bus", name: "School Bus", widget: "image" }
           - { label: "Events", name: "Events", widget: "image" }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "gallery"
+        label: "Gallery Photos"
+        file: "data/senior-high/gallery.json"
+        fields:
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.imageCategory}} — {{fields.caption}}"
+            fields:
+              - { label: "Unique ID", name: "id", widget: "string", hint: "A short unique name, e.g. campus-4. Not shown on the site." }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+              - label: "Category"
+                name: "imageCategory"
+                widget: "select"
+                options:
+                  ["Campus", "Students", "Events", "Sports", "Classrooms", "Computer Lab", "Graduation", "Hostel"]
+              - { label: "Caption", name: "caption", widget: "string" }
