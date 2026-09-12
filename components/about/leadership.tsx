@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { SectionTitle } from "@/components/shared/section-title";
 import { StaffCard } from "@/components/shared/staff-card";
 import { seniorHighStaff } from "@/data/senior-high/staff";
@@ -12,6 +14,15 @@ export function Leadership() {
         {leadership.map((staff) => (
           <StaffCard key={staff.id} staff={staff} />
         ))}
+      </div>
+      <div className="mt-8 text-center">
+        <Link
+          href="/about/staff"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+        >
+          Meet the full staff
+          <ArrowRight className="size-4" aria-hidden="true" />
+        </Link>
       </div>
     </section>
   );

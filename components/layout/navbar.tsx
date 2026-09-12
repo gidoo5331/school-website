@@ -18,6 +18,7 @@ import { navigation } from "@/data/navigation";
 import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types/nav";
+import { ThemeToggle } from "@/components/shared/theme-toggle";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -152,23 +153,29 @@ export function Navbar() {
 
         <DesktopNav pathname={pathname} />
 
-        <Button render={<Link href="/admissions" />} className="hidden md:inline-flex">
-          Apply Now
-        </Button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle className="hidden md:inline-flex" />
+          <Button render={<Link href="/admissions" />} className="hidden md:inline-flex">
+            Apply Now
+          </Button>
+        </div>
 
-        <Sheet>
-          <SheetTrigger
-            render={<Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu" />}
-          >
-            <MenuIcon className="size-5" aria-hidden="true" />
-          </SheetTrigger>
-          <SheetContent side="right">
-            <SheetHeader>
-              <SheetTitle>{site.name}</SheetTitle>
-            </SheetHeader>
-            <MobileNav pathname={pathname} />
-          </SheetContent>
-        </Sheet>
+        <div className="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <Sheet>
+            <SheetTrigger
+              render={<Button variant="ghost" size="icon" aria-label="Open menu" />}
+            >
+              <MenuIcon className="size-5" aria-hidden="true" />
+            </SheetTrigger>
+            <SheetContent side="right">
+              <SheetHeader>
+                <SheetTitle>{site.name}</SheetTitle>
+              </SheetHeader>
+              <MobileNav pathname={pathname} />
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
