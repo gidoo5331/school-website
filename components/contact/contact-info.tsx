@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
-import { FacebookIcon, TwitterIcon, InstagramIcon } from "@/components/shared/social-icons";
+import { FacebookIcon, TwitterIcon, InstagramIcon, WhatsappIcon } from "@/components/shared/social-icons";
+import { getWhatsappLink } from "@/lib/whatsapp";
 import { site } from "@/data/site";
 
 const socialLinks = [
@@ -37,6 +38,21 @@ export function ContactInfo() {
               </a>
             </p>
           ))}
+        </div>
+      </div>
+
+      <div className="flex items-start gap-3">
+        <WhatsappIcon className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
+        <div>
+          <p className="text-sm font-semibold text-foreground">WhatsApp</p>
+          <a
+            href={getWhatsappLink()}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-sm text-muted-foreground hover:text-primary"
+          >
+            Chat with us
+          </a>
         </div>
       </div>
 

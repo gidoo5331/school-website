@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Poppins, Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { WhatsappButton } from "@/components/shared/whatsapp-button";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsappButton />
         <Script id="netlify-identity-redirect" strategy="afterInteractive">
           {`
             if (window.netlifyIdentity) {
