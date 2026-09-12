@@ -105,7 +105,7 @@ var KeyPhotosPreview = createClass({
             { key: category, className: "preview-photo" },
             src
               ? h("img", { src: src, alt: category })
-              : h("div", { style: { height: "110px", background: "rgba(0,0,0,.05)" } }),
+              : h("div", { className: "preview-photo-empty" }, "No photo yet"),
             h("figcaption", {}, category),
           );
         }),
@@ -134,7 +134,7 @@ var GalleryPreview = createClass({
             { key: photo.id || i, className: "preview-photo" },
             src
               ? h("img", { src: src, alt: photo.caption })
-              : h("div", { style: { height: "110px", background: "rgba(0,0,0,.05)" } }),
+              : h("div", { className: "preview-photo-empty" }, "No photo yet — falls back to the category's Key Photo"),
             h(
               "figcaption",
               {},
