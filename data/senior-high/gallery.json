@@ -8,7 +8,6 @@
       "imageCategory": "Students",
       "caption": "Students in house wear on campus"
     },
-    { "id": "shs-hostel-1", "image": "/images/campus-classroom-block.jpg", "imageCategory": "Hostel", "caption": "Boarding hostel" },
     { "id": "shs-sports-1", "imageCategory": "Sports", "caption": "Inter-house sports" },
     { "id": "shs-events-1", "imageCategory": "Events", "caption": "Speech and prize-giving day" },
     {

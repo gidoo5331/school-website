@@ -10,7 +10,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, breadcrumb, className }: PageHeaderProps) {
   return (
-    <div className={cn("border-b border-border bg-muted/30 py-16", className)}>
+    <div className={cn("border-b border-border bg-muted py-16", className)}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {breadcrumb && <Breadcrumb items={breadcrumb} />}
         <h1

@@ -3,13 +3,17 @@ import { site } from "@/data/site";
 
 export function ContactAdmissions() {
   return (
-    <section className="bg-primary py-16 text-primary-foreground">
+    <section className="bg-primary py-16 text-white">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-        <p className="text-sm font-semibold tracking-wide text-secondary uppercase">Contact Admissions</p>
-        <h2 className="mt-1 font-heading text-3xl font-semibold sm:text-4xl">
+        <p className="eyebrow-on-dark flex items-center justify-center gap-2.5">
+          <span aria-hidden className="h-px w-6 bg-gold" />
+          Contact Admissions
+          <span aria-hidden className="h-px w-6 bg-gold" />
+        </p>
+        <h2 className="mt-3 font-heading text-3xl font-semibold sm:text-4xl">
           Have questions about applying?
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-primary-foreground/80">
+        <p className="mx-auto mt-3 max-w-xl text-white/80">
           Reach out to the admissions office — we&apos;re happy to walk you through the process.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm">
