@@ -56,7 +56,7 @@ export const homeContent = {
         icon: "building-2",
         title: "Day & Boarding",
         description:
-          "Flexible Day and Boarding options supervised by resident housemasters and housemistresses.",
+          "Flexible Day and Boarding options supervised by resident homemaster and homemistress.",
       },
       {
         icon: "graduation-cap",
