@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Poppins, Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -31,9 +32,25 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {/* Netlify Identity invite/reset emails link to the site root with a
+            token in the URL hash, not to /admin — the widget must be loaded
+            here to catch that token and open the set-password modal. */}
+        <Script
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          strategy="beforeInteractive"
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Script id="netlify-identity-redirect" strategy="afterInteractive">
+          {`
+            if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
