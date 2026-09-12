@@ -17,6 +17,120 @@
       "name": "To be announced",
       "position": "Assistant Headmaster, Administration",
       "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-samuel-takyi",
+      "name": "Samuel Takyi",
+      "position": "Chemistry",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-evans-amankrah",
+      "name": "Evans Amankrah",
+      "position": "Social Studies and Geography",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-godfred-arthur",
+      "name": "Godfred Arthur",
+      "position": "Economics and Government",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-kingsford-wilson",
+      "name": "Kingsford Wilson",
+      "position": "ICT",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-belinda-ansah-brew",
+      "name": "Belinda Ansah Brew",
+      "position": "Fante",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-emmanuel-acquah",
+      "name": "Emmanuel Acquah",
+      "position": "Elective Mathematics",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-lydia-hoedzordey",
+      "name": "Lydia Hoedzordey",
+      "position": "French",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-joshua-bintil",
+      "name": "Joshua Bintil",
+      "position": "English Language",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-matilda-banson",
+      "name": "Matilda Banson",
+      "position": "Physical Education",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-rose-abonyi-alhassan",
+      "name": "Rose Abonyi Alhassan",
+      "position": "Performing Arts",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-godfrey-essuman",
+      "name": "Godfrey Essuman",
+      "position": "Integrated Science and Elective Biology",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-martin-addo",
+      "name": "Martin Addo",
+      "position": "History",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-florence-teye",
+      "name": "Florence Teye",
+      "position": "English Language",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-benjamin-baifi",
+      "name": "Benjamin Baifi",
+      "position": "Core Mathematics",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-issah-kweku-nkrumah",
+      "name": "Issah Kweku Nkrumah",
+      "position": "Visual Arts",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-eunice-quansah",
+      "name": "Eunice Quansah",
+      "position": "Clothing",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-abigail-gyimah-nyarkoh",
+      "name": "Abigail Gyimah Nyarkoh",
+      "position": "Food and Nutrition",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-godfred-essilfie",
+      "name": "Godfred Essilfie",
+      "position": "Business",
+      "imageCategory": "Teachers"
+    },
+    {
+      "id": "shs-michael-sey",
+      "name": "Michael Sey",
+      "position": "CRS",
+      "imageCategory": "Teachers"
     }
   ]
 }

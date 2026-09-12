@@ -4,7 +4,7 @@ import { SectionTitle } from "@/components/shared/section-title";
 import { StaffCard } from "@/components/shared/staff-card";
 import { seniorHighStaff } from "@/data/senior-high/staff";
 
-const leadership = seniorHighStaff;
+const leadership = seniorHighStaff.filter((staff) => staff.id.startsWith("shs-headmaster") || staff.id.startsWith("shs-assistant-head"));
 
 export function Leadership() {
   return (
