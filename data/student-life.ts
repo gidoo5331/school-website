@@ -5,13 +5,13 @@ export const studentLife = {
     {
       icon: "dumbbell",
       title: "Sports",
-      description: "Football, athletics, and inter-house competitions build teamwork and fitness.",
+      description: "Football, athletics, inter-house, and inter-school competitions build teamwork and fitness.",
     },
     {
       icon: "users",
       title: "Clubs",
       description:
-        "Debate, drama, and cultural dance clubs give students room to explore their interests.",
+        "Debate, drama, cardet adolescent health and cultural dance clubs give students room to explore their interests.",
     },
     {
       icon: "book-open",
