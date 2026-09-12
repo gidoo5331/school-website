@@ -1,0 +1,88 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "admissions"
+    label: "Admissions"
+    files:
+      - name: "admissions"
+        label: "Admissions Content"
+        file: "data/admissions.json"
+        fields:
+          - label: "Admission Process Steps"
+            name: "process"
+            widget: "list"
+            fields:
+              - { label: "Step Number", name: "step", widget: "number" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Requirements"
+            name: "requirements"
+            widget: "list"
+            field: { label: "Item", name: "item", widget: "string" }
+          - label: "Free SHS Benefits"
+            name: "freeShs"
+            widget: "list"
+            field: { label: "Item", name: "item", widget: "string" }
+          - label: "Optional Services"
+            name: "optionalServices"
+            widget: "list"
+            fields:
+              - { label: "Service", name: "service", widget: "string" }
+              - { label: "Fee", name: "fee", widget: "string" }
+          - label: "Continuing Student Fees"
+            name: "continuingStudentFees"
+            widget: "object"
+            fields:
+              - { label: "Note", name: "note", widget: "text" }
+              - label: "Fee Rows"
+                name: "rows"
+                widget: "list"
+                fields:
+                  - { label: "Programme", name: "programme", widget: "string" }
+                  - { label: "Day Fee", name: "day", widget: "string" }
+                  - { label: "Hostel Fee", name: "hostel", widget: "string" }
+          - label: "Prospectus Downloads"
+            name: "downloads"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "PDF Link", name: "href", widget: "string" }
+          - label: "Key Dates"
+            name: "keyDates"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+  - name: "photos"
+    label: "Key Photos"
+    files:
+      - name: "stock-images"
+        label: "Site Photos"
+        file: "data/stock-images.json"
+        fields:
+          - { label: "Campus", name: "Campus", widget: "image" }
+          - { label: "Administration Block", name: "Administration Block", widget: "image" }
+          - { label: "Classrooms", name: "Classrooms", widget: "image" }
+          - { label: "Students", name: "Students", widget: "image" }
+          - { label: "Teachers", name: "Teachers", widget: "image" }
+          - { label: "Library", name: "Library", widget: "image" }
+          - { label: "Computer Lab", name: "Computer Lab", widget: "image" }
+          - { label: "Science Lab", name: "Science Lab", widget: "image" }
+          - { label: "Hostel", name: "Hostel", widget: "image" }
+          - { label: "Sports", name: "Sports", widget: "image" }
+          - { label: "Graduation", name: "Graduation", widget: "image" }
+          - { label: "School Bus", name: "School Bus", widget: "image" }
+          - { label: "Events", name: "Events", widget: "image" }
