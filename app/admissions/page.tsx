@@ -28,7 +28,7 @@ export default function AdmissionsPage() {
       <FreeShs />
       <Downloads />
       <KeyDates />
-      <Fees />
+      {/* <Fees /> */}
       <Faq />
       <ContactAdmissions />
     </>
