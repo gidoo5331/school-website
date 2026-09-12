@@ -1,33 +1,9 @@
 // Photography keyed by the `imageCategory` strings used throughout data/.
-// Entries under /images are real Obama College photos; the Wikimedia Commons
-// URLs are free-license stand-ins pending real photography for those
-// categories (re-check each source file's license before a public launch —
-// most require attribution; see the file's Commons page).
-export const stockImages: Record<string, string> = {
-  Campus: "/images/campus-classroom-block.jpg",
-  "Administration Block": "/images/campus-classroom-block.jpg",
-  Classrooms: "/images/campus-classroom-block.jpg",
-  Students: "/images/students-group.jpg",
-  Teachers:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/African_teacher.jpg/1280px-African_teacher.jpg",
-  Library:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Biblio_escolar.jpg/1280px-Biblio_escolar.jpg",
-  "Computer Lab":
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/AIUB_Computer_Lab.jpg/1280px-AIUB_Computer_Lab.jpg",
-  "Science Lab":
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Biology_Laboratory_of_Contai_Public_School.jpg/1280px-Biology_Laboratory_of_Contai_Public_School.jpg",
-  Hostel:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Baylor_School_Campus_1.jpg/1280px-Baylor_School_Campus_1.jpg",
-  Sports:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/A_Female_Athlete._Junior_female_student_as_she_prepares_for_a_200_meters_race.jpg/1280px-A_Female_Athlete._Junior_female_student_as_she_prepares_for_a_200_meters_race.jpg",
-  Graduation:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/11th_Graduation_Day.jpg/1280px-11th_Graduation_Day.jpg",
-  "School Bus":
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Ashok_Layland_Schoolbus.JPG/1280px-Ashok_Layland_Schoolbus.JPG",
-  Events:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Dance_performed_by_the_students_of_Mampong_School_for_the_Deaf_and_Dumb.jpg/1280px-Dance_performed_by_the_students_of_Mampong_School_for_the_Deaf_and_Dumb.jpg",
-};
+// Every category currently points at the same placeholder photo pending
+// real school photography — editable per-category via the /admin CMS
+// (Key Photos collection) as real photos come in.
+import stockImages from "@/data/stock-images.json";
 
 export function getStockImage(category: string): string | undefined {
-  return stockImages[category];
+  return (stockImages as Record<string, string>)[category];
 }
