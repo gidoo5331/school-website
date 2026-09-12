@@ -26,7 +26,7 @@ export const studentLife = {
     {
       icon: "building-2",
       title: "Boarding",
-      description: "Supervised Day and Boarding facilities with resident housemasters and housemistresses.",
+      description: "Supervised Day and Boarding facilities with resident homemaster and homemistress.",
     },
     {
       icon: "calendar",

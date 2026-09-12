@@ -16,7 +16,7 @@ export const seniorHighOverview = {
       "Both Day and Boarding options are available. Boarding and campus feeding are optional paid services on top of the Free SHS benefits.",
     facilities: [
       "Boys' and girls' hostels",
-      "Resident housemasters and housemistresses",
+      "Resident homemaster and homemistress",
       "Dining hall",
       "Accommodation: GH₵500.00 per semester",
       "Campus feeding: GH₵15.00 per day (SHS 1 & 2)",
