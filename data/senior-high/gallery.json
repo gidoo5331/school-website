@@ -22,6 +22,66 @@
       "image": "/images/morning-assembly.jpg",
       "imageCategory": "Events",
       "caption": "Students during morning assembly"
+    },
+    {
+      "id": "shs-students-3",
+      "image": "/images/students-orientation.jpg",
+      "imageCategory": "Students",
+      "caption": "Students during orientation"
+    },
+    {
+      "id": "shs-students-4",
+      "image": "/images/students-outdoor-group.jpg",
+      "imageCategory": "Students",
+      "caption": "Students on campus grounds"
+    },
+    {
+      "id": "shs-events-5",
+      "image": "/images/miss-obaco-pageant.jpg",
+      "imageCategory": "Events",
+      "caption": "Miss Obaco pageant winners"
+    },
+    {
+      "id": "shs-events-7",
+      "image": "/images/cadet-corps-parade.jpg",
+      "imageCategory": "Events",
+      "caption": "Cadet Corps parade"
+    },
+    {
+      "id": "shs-events-8",
+      "image": "/images/cadet-corps-parade-1.jpg",
+      "imageCategory": "Events",
+      "caption": "Cadet Corps parade"
+    },
+    {
+      "id": "shs-events-9",
+      "image": "/images/cadet-corps-parade-2.jpg",
+      "imageCategory": "Events",
+      "caption": "Cadet Corps parade"
+    },
+    {
+      "id": "shs-events-10",
+      "image": "/images/cadet-corps-parade-3.jpg",
+      "imageCategory": "Events",
+      "caption": "Cadet Corps parade"
+    },
+    {
+      "id": "shs-events-11",
+      "image": "/images/cadet-corps-parade-4.jpg",
+      "imageCategory": "Events",
+      "caption": "Cadet Corps parade"
+    },
+    {
+      "id": "shs-events-12",
+      "image": "/images/cadet-corps-parade-5.jpg",
+      "imageCategory": "Events",
+      "caption": "Cadet Corps parade"
+    },
+    {
+      "id": "shs-events-13",
+      "image": "/images/cultural-day-group.jpg",
+      "imageCategory": "Events",
+      "caption": "Cultural Day festivities"
     }
   ]
 }
