@@ -87,6 +87,30 @@ collections:
           - { label: "School Bus", name: "School Bus", widget: "image" }
           - { label: "Events", name: "Events", widget: "image" }
 
+  - name: "staff"
+    label: "Staff"
+    files:
+      - name: "staff"
+        label: "Staff Members"
+        file: "data/senior-high/staff.json"
+        fields:
+          - label: "Staff"
+            name: "staff"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.position}}"
+            fields:
+              - { label: "Unique ID", name: "id", widget: "string", hint: "A short unique name, e.g. shs-headmaster. Not shown on the site." }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+              - label: "Photo Category"
+                name: "imageCategory"
+                widget: "select"
+                hint: "Used only if no photo is set above."
+                options:
+                  ["Campus", "Students", "Events", "Sports", "Classrooms", "Computer Lab", "Graduation", "Hostel", "Teachers", "Library", "Science Lab", "School Bus"]
+              - { label: "Bio", name: "bio", widget: "text", required: false }
+
   - name: "gallery"
     label: "Gallery"
     files:

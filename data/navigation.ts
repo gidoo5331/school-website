@@ -7,6 +7,7 @@ export const navigation: NavItem[] = [
     href: "/about",
     children: [
       { label: "About Us", href: "/about" },
+      { label: "Staff", href: "/about/staff" },
       { label: "Gallery", href: "/gallery" },
       { label: "News", href: "/news" },
     ],
