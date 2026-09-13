@@ -24,8 +24,9 @@ export const site = {
       "https://www.google.com/maps/place/OBAMA+COLLEGE,+MANKESSIM/@5.2675599,-0.9988335,1264m/data=!3m2!1e3!4b1!4m6!3m5!1s0xfde112b6691f0b7:0x67608ec37a2d315c!8m2!3d5.2675599!4d-0.9988335!16s%2Fg%2F11zdd4rb72",
   },
   banks: [
-    { bank: "ADB", accountName: "Obama College Mankessim", branch: "Mankessim", accountNumber: "3041010106647901" },
-    { bank: "GCB Bank", accountName: "Obaco Ghana Limited", branch: "Mankessim", accountNumber: "3091130000613" },
+    { bank: "-", accountName: "Obama College Mankessim", branch: "Mankessim", accountNumber: "-" },
+    // { bank: "ADB", accountName: "Obama College Mankessim", branch: "Mankessim", accountNumber: "3041010106647901" },
+    // { bank: "GCB Bank", accountName: "Obaco Ghana Limited", branch: "Mankessim", accountNumber: "3091130000613" },
   ],
   social: {
     facebook: "",
