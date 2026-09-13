@@ -2,133 +2,127 @@
   "staff": [
     {
       "id": "shs-headmaster",
-      "name": "To be announced",
+      "name": "Mr. Samuel Otoo",
       "position": "Headmaster",
       "imageCategory": "Teachers"
     },
     {
-      "id": "shs-assistant-head-academic",
-      "name": "To be announced",
-      "position": "Assistant Headmaster, Academics",
-      "imageCategory": "Teachers"
-    },
-    {
-      "id": "shs-assistant-head-admin",
-      "name": "To be announced",
-      "position": "Assistant Headmaster, Administration",
+      "id": "shs-assistant-headmaster",
+      "name": "Mr. Samuel Amoah",
+      "position": "Assistant Headmaster",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-samuel-takyi",
-      "name": "Samuel Takyi",
+      "name": "Mr. Samuel Takyi",
       "position": "Chemistry",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-evans-amankrah",
-      "name": "Evans Amankrah",
+      "name": "Mr. Evans Amankrah",
       "position": "Social Studies and Geography",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-godfred-arthur",
-      "name": "Godfred Arthur",
+      "name": "Mr. Godfred Arthur",
       "position": "Economics and Government",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-kingsford-wilson",
-      "name": "Kingsford Wilson",
+      "name": "Mr. Kingsford Wilson",
       "position": "ICT",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-belinda-ansah-brew",
-      "name": "Belinda Ansah Brew",
+      "name": "Miss Belinda Ansah Brew",
       "position": "Fante",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-emmanuel-acquah",
-      "name": "Emmanuel Acquah",
+      "name": "Mr. Emmanuel Acquah",
       "position": "Elective Mathematics",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-lydia-hoedzordey",
-      "name": "Lydia Hoedzordey",
+      "name": "Miss Lydia Hoedzordey",
       "position": "French",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-joshua-bintil",
-      "name": "Joshua Bintil",
+      "name": "Mr. Joshua Bintil",
       "position": "English Language",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-matilda-banson",
-      "name": "Matilda Banson",
+      "name": "Miss Matilda Banson",
       "position": "Physical Education",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-rose-abonyi-alhassan",
-      "name": "Rose Abonyi Alhassan",
+      "name": "Miss Rose Abonyi Alhassan",
       "position": "Performing Arts",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-godfrey-essuman",
-      "name": "Godfrey Essuman",
+      "name": "Mr. Godfrey Essuman",
       "position": "Integrated Science and Elective Biology",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-martin-addo",
-      "name": "Martin Addo",
+      "name": "Mr. Martin Addo",
       "position": "History",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-florence-teye",
-      "name": "Florence Teye",
+      "name": "Miss Florence Teye",
       "position": "English Language",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-benjamin-baifi",
-      "name": "Benjamin Baifi",
+      "name": "Mr. Benjamin Baifi",
       "position": "Core Mathematics",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-issah-kweku-nkrumah",
-      "name": "Issah Kweku Nkrumah",
+      "name": "Mr. Issah Kweku Nkrumah",
       "position": "Visual Arts",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-eunice-quansah",
-      "name": "Eunice Quansah",
+      "name": "Miss Eunice Quansah",
       "position": "Clothing",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-abigail-gyimah-nyarkoh",
-      "name": "Abigail Gyimah Nyarkoh",
+      "name": "Miss Abigail Gyimah Nyarkoh",
       "position": "Food and Nutrition",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-godfred-essilfie",
-      "name": "Godfred Essilfie",
+      "name": "Mr. Godfred Essilfie",
       "position": "Business",
       "imageCategory": "Teachers"
     },
     {
       "id": "shs-michael-sey",
-      "name": "Michael Sey",
+      "name": "Mr. Michael Sey",
       "position": "CRS",
       "imageCategory": "Teachers"
     }
