@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "Our Staff",
   description:
     "Meet the leadership and staff of Obama College, Mankessim — the team guiding our Senior High School.",
+  // Uncomment the following line to prevent search engines from indexing this page if desired.
+    robots: { index: false, follow: false },
 };
 
 export default function StaffPage() {
