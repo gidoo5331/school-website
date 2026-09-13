@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { WhatsappButton } from "@/components/shared/whatsapp-button";
 import { ThemeProvider } from "@/components/theme-provider";
 import { site } from "@/data/site";
+import { getSchoolSchema } from "@/lib/seo";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -20,11 +21,38 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: {
-    default: site.name,
+    default: site.fullName,
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  keywords: [
+    "Obama College",
+    "Obama College Mankessim",
+    "Senior High School Ghana",
+    "Free SHS Mankessim",
+    "SHS Central Region",
+    "boarding school Ghana",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GH",
+    url: site.url,
+    siteName: site.fullName,
+    title: site.fullName,
+    description: site.description,
+    images: [{ url: "/logo.jpeg", width: 800, height: 800, alt: site.fullName }],
+  },
+  twitter: {
+    card: "summary",
+    title: site.fullName,
+    description: site.description,
+    images: ["/logo.jpeg"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -35,6 +63,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getSchoolSchema()) }}
+        />
         <ThemeProvider>
           {/* Netlify Identity invite/reset emails link to the site root with a
               token in the URL hash, not to /admin — the widget must be loaded

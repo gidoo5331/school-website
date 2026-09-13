@@ -4,6 +4,7 @@ export const site = {
   name: "Obama College",
   fullName: "Obama College, Mankessim",
   shortName: "OBACO",
+  url: "https://obamacollege.net",
   motto: "You Can",
   established: 2009,
   description:
