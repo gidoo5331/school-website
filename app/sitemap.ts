@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${site.url}/`, changeFrequency: "weekly", priority: 1.0 },
     { url: `${site.url}/about`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${site.url}/about/staff`, changeFrequency: "monthly", priority: 0.6 },
+    // { url: `${site.url}/about/staff`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${site.url}/programmes`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${site.url}/admissions`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${site.url}/student-life`, changeFrequency: "monthly", priority: 0.7 },
