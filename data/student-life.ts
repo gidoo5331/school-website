@@ -11,7 +11,7 @@ export const studentLife = {
       icon: "users",
       title: "Clubs",
       description:
-        "Debate, drama, cardet adolescent health and cultural dance clubs give students room to explore their interests.",
+        "Debate, drama, cardet, adolescent health, and cultural dance clubs give students room to explore their interests.",
     },
     {
       icon: "book-open",
