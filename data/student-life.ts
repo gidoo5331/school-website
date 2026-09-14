@@ -49,5 +49,10 @@ export const studentLife = {
       title: "Guidance & Counselling",
       description: "Dedicated support to help students navigate academic and personal challenges.",
     },
+    {
+      icon: "drama",
+      title: "Entertainment",
+      description: "Cultural day celebrations, drama, and music give students room to perform and unwind.",
+    },
   ],
 } as const;

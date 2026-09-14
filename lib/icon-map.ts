@@ -11,6 +11,7 @@ import {
   HeartPulse,
   Handshake,
   Dumbbell,
+  Drama,
   type LucideIcon,
 } from "lucide-react";
 
@@ -27,6 +28,7 @@ export const iconMap = {
   "heart-pulse": HeartPulse,
   handshake: Handshake,
   dumbbell: Dumbbell,
+  drama: Drama,
 } satisfies Record<string, LucideIcon>;
 
 export type IconKey = keyof typeof iconMap;
