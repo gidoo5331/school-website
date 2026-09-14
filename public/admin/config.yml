@@ -111,6 +111,34 @@ collections:
                   ["Campus", "Students", "Events", "Sports", "Classrooms", "Computer Lab", "Graduation", "Hostel", "Teachers", "Library", "Science Lab", "School Bus"]
               - { label: "Bio", name: "bio", widget: "text", required: false }
 
+  - name: "news"
+    label: "News"
+    files:
+      - name: "news"
+        label: "News Articles"
+        file: "data/senior-high/news.json"
+        fields:
+          - label: "Articles"
+            name: "news"
+            widget: "list"
+            summary: "{{fields.publishedAt}} — {{fields.title}}"
+            fields:
+              - { label: "Unique ID", name: "id", widget: "string", hint: "A short unique name, e.g. shs-news-3. Not shown on the site." }
+              - { label: "URL Slug", name: "slug", widget: "string", hint: "Used in the article's web address, e.g. shs-computer-lab-upgrade." }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+              - label: "Photo Category"
+                name: "imageCategory"
+                widget: "select"
+                hint: "Used only if no photo is set above."
+                options:
+                  ["Campus", "Students", "Events", "Sports", "Classrooms", "Computer Lab", "Graduation", "Hostel", "Teachers", "Library", "Science Lab", "School Bus"]
+              - { label: "Summary", name: "summary", widget: "text", hint: "Short teaser shown on news cards." }
+              - { label: "Body", name: "body", widget: "text", hint: "Full article content." }
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Published Date", name: "publishedAt", widget: "date", format: "YYYY-MM-DD" }
+
   - name: "gallery"
     label: "Gallery"
     files:
