@@ -20,9 +20,14 @@ export default function StaffPage() {
         breadcrumb={[{ label: "About", href: "/about" }, { label: "Staff" }]}
       />
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
           {seniorHighStaff.map((staff) => (
-            <StaffCard key={staff.id} staff={staff} />
+            <div
+              key={staff.id}
+              className="rounded-2xl bg-background p-6 ring-1 ring-border transition hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              <StaffCard staff={staff} />
+            </div>
           ))}
         </div>
       </section>
