@@ -12,6 +12,7 @@ import {
   Handshake,
   Dumbbell,
   Drama,
+  Church,
   type LucideIcon,
 } from "lucide-react";
 
@@ -29,6 +30,7 @@ export const iconMap = {
   handshake: Handshake,
   dumbbell: Dumbbell,
   drama: Drama,
+  church: Church,
 } satisfies Record<string, LucideIcon>;
 
 export type IconKey = keyof typeof iconMap;

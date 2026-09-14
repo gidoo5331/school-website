@@ -42,7 +42,7 @@ export const studentLife = {
     {
       icon: "heart-pulse",
       title: "Health",
-      description: "On-site sick bay and health support for all students.",
+      description: "An on-site infirmary with separate male and female wards for all students.",
     },
     {
       icon: "handshake",
@@ -53,6 +53,11 @@ export const studentLife = {
       icon: "drama",
       title: "Entertainment",
       description: "Cultural day celebrations, drama, and music give students room to perform and unwind.",
+    },
+    {
+      icon: "church",
+      title: "Chapel",
+      description: "Midweek (Wednesday) and Sunday church services support students' spiritual growth.",
     },
   ],
 } as const;

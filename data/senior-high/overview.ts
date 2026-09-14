@@ -18,6 +18,7 @@ export const seniorHighOverview = {
       "Boys' and girls' hostels",
       "Resident homemaster and homemistress",
       "Dining hall",
+      "Supervised evening preps",
       "Accommodation: GH₵500.00 per semester",
       "Campus feeding: GH₵15.00 per day (SHS 1 & 2)",
     ],
