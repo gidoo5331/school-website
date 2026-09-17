@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/shared/page-header";
+import { PhotoHero } from "@/components/shared/photo-hero";
 import { Overview } from "@/components/about/overview";
 import { CoreValues } from "@/components/about/core-values";
 import { Leadership } from "@/components/about/leadership";
@@ -16,9 +16,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHeader
+      <PhotoHero
         title="About Obama College"
         description="A mixed Day and Boarding Senior High School in Mankessim, serving the Central Region since 2009."
+        category="Administration Block"
         breadcrumb={[{ label: "About" }]}
       />
       <Overview />

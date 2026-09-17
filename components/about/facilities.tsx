@@ -1,5 +1,5 @@
-import { Building2 } from "lucide-react";
 import { SectionTitle } from "@/components/shared/section-title";
+import { SiteImage } from "@/components/shared/site-image";
 import { seniorHighOverview } from "@/data/senior-high/overview";
 
 const facilities = seniorHighOverview.facilities;
@@ -12,11 +12,19 @@ export function Facilities() {
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {facilities.map((facility) => (
             <li
-              key={facility}
-              className="flex items-center gap-3 rounded-xl bg-background p-4 ring-1 ring-border"
+              key={facility.name}
+              className="group relative aspect-4/3 overflow-hidden rounded-xl ring-1 ring-border"
             >
-              <Building2 className="size-5 shrink-0 text-primary" aria-hidden="true" />
-              <span className="text-sm font-medium text-foreground">{facility}</span>
+              <SiteImage
+                category={facility.imageCategory}
+                alt={facility.name}
+                className="object-cover transition duration-300 group-hover:scale-105"
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
+              <span className="absolute inset-x-0 bottom-0 p-4 text-sm font-medium text-white">
+                {facility.name}
+              </span>
             </li>
           ))}
         </ul>

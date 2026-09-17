@@ -5,6 +5,7 @@ export const seniorHighPrograms: Program[] = [
     id: "general-arts",
     slug: "general-arts",
     title: "General Arts",
+    imageCategory: "General Arts",
     overview:
       "A broad-based programme covering the humanities and social sciences, preparing students for careers in law, journalism, education, public service, and the arts.",
     subjects: [
@@ -29,6 +30,7 @@ export const seniorHighPrograms: Program[] = [
     id: "general-science",
     slug: "general-science",
     title: "General Science",
+    imageCategory: "Science Lab",
     overview:
       "A rigorous programme in the physical and life sciences, preparing students for tertiary study and careers in medicine, engineering, technology, and research.",
     subjects: [
@@ -50,6 +52,7 @@ export const seniorHighPrograms: Program[] = [
     id: "business",
     slug: "business",
     title: "Business",
+    imageCategory: "Business",
     overview:
       "Prepares students with foundational knowledge in accounting, management, and commerce for further study or entry into the business world.",
     subjects: [
@@ -72,6 +75,7 @@ export const seniorHighPrograms: Program[] = [
     id: "home-economics",
     slug: "home-economics",
     title: "Home Economics",
+    imageCategory: "Home Economics",
     overview:
       "Combines nutrition, textiles, and management skills to prepare students for careers in hospitality, fashion, and related fields.",
     subjects: [
@@ -93,6 +97,7 @@ export const seniorHighPrograms: Program[] = [
     id: "visual-arts",
     slug: "visual-arts",
     title: "Visual Arts",
+    imageCategory: "Visual Arts",
     overview:
       "Develops creative and technical skills across drawing, graphic design, and picture-making for students pursuing careers in the creative industries.",
     subjects: [

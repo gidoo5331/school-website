@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/shared/page-header";
+import { PhotoHero } from "@/components/shared/photo-hero";
 import { Process } from "@/components/admissions/process";
 import { Requirements } from "@/components/admissions/requirements";
 import { FreeShs } from "@/components/admissions/free-shs";
@@ -18,9 +18,11 @@ export const metadata: Metadata = {
 export default function AdmissionsPage() {
   return (
     <>
-      <PageHeader
+      <PhotoHero
         title="Admissions"
         description="Everything you need to know to join Obama College, Mankessim for the 2026/2027 academic year."
+        category="Graduation"
+        src="/images/students-in-uniform.jpg"
         breadcrumb={[{ label: "Admissions" }]}
       />
       <Process />

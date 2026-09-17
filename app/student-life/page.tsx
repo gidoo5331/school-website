@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/shared/page-header";
+import { PhotoHero } from "@/components/shared/photo-hero";
 import { Highlights } from "@/components/student-life/highlights";
 import { ChecklistSection } from "@/components/shared/checklist-section";
 import { seniorHighOverview } from "@/data/senior-high/overview";
@@ -12,9 +12,11 @@ export const metadata: Metadata = {
 export default function StudentLifePage() {
   return (
     <>
-      <PageHeader
+      <PhotoHero
         title="Student Life"
         description="Life at Obama College extends well beyond the classroom."
+        category="Sports"
+        src="/images/sports-football-trophy.jpg"
         breadcrumb={[{ label: "Student Life" }]}
       />
       <Highlights />

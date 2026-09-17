@@ -11,12 +11,17 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
-    // Wikimedia Commons is used as a source of free-license stand-in
-    // photography until Obama College supplies real photos.
+    // Wikimedia Commons and Unsplash are used as sources of free-license
+    // stand-in photography until Obama College supplies real photos.
     remotePatterns: [
       {
         protocol: "https",
         hostname: "upload.wikimedia.org",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
         pathname: "/**",
       },
     ],

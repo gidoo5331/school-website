@@ -86,6 +86,16 @@ collections:
           - { label: "Graduation", name: "Graduation", widget: "image" }
           - { label: "School Bus", name: "School Bus", widget: "image" }
           - { label: "Events", name: "Events", widget: "image" }
+          - { label: "Business", name: "Business", widget: "image" }
+          - { label: "Home Economics", name: "Home Economics", widget: "image" }
+          - { label: "Visual Arts", name: "Visual Arts", widget: "image" }
+          - { label: "General Arts", name: "General Arts", widget: "image" }
+          - { label: "Health", name: "Health", widget: "image" }
+          - { label: "Chapel", name: "Chapel", widget: "image" }
+          - { label: "Leadership", name: "Leadership", widget: "image" }
+          - { label: "Entertainment", name: "Entertainment", widget: "image" }
+          - { label: "Clubs", name: "Clubs", widget: "image" }
+          - { label: "Guidance & Counselling", name: "Guidance & Counselling", widget: "image" }
 
   - name: "staff"
     label: "Staff"

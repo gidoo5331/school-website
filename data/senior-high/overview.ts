@@ -34,12 +34,12 @@ export const seniorHighOverview = {
     "Career guidance and counselling",
   ],
   facilities: [
-    "Multi-storey classroom blocks",
-    "Computer laboratory",
-    "Science laboratory",
-    "Library",
-    "Boarding houses",
-    "Sports field",
+    { name: "Multi-storey classroom blocks", imageCategory: "Classrooms" },
+    { name: "Computer laboratory", imageCategory: "Computer Lab" },
+    { name: "Science laboratory", imageCategory: "Science Lab" },
+    { name: "Library", imageCategory: "Library" },
+    { name: "Boarding houses", imageCategory: "Hostel" },
+    { name: "Sports field", imageCategory: "Sports" },
   ],
   faqs: [
     {
