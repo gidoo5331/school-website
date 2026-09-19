@@ -2,11 +2,11 @@
   "news": [
     {
       "id": "shs-news-1",
-      "slug": "shs-mock-wassce-begins",
-      "title": "SHS Third-Year Students Begin Mock WASSCE",
+      "slug": "shs-mock-begins",
+      "title": "SHS Third-Year Students Begin Mock",
       "imageCategory": "Classrooms",
-      "summary": "Final-year students began a two-week mock WASSCE examination series to prepare for the national exams.",
-      "body": "Final-year students began a two-week mock WASSCE examination series designed to prepare them for the national exams, with subject teachers providing revision support throughout.",
+      "summary": "Final-year students began a two-week mock examination series to prepare for the national exams.",
+      "body": "Final-year students began a two-week mock examination series designed to prepare them for the national exams, with subject teachers providing revision support throughout.",
       "author": "Obama College, Mankessim",
       "category": "Academics",
       "publishedAt": "2026-02-02"

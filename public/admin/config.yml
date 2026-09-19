@@ -149,6 +149,25 @@ collections:
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Published Date", name: "publishedAt", widget: "date", format: "YYYY-MM-DD" }
 
+  - name: "flyers"
+    label: "Home Page Carousel"
+    files:
+      - name: "flyers"
+        label: "Activity Flyers"
+        file: "data/senior-high/flyers.json"
+        fields:
+          - label: "Flyers"
+            name: "flyers"
+            widget: "list"
+            summary: "{{fields.title}}"
+            hint: "Shown as a scrolling carousel on the home page, right below the hero. Add a flyer for each current activity/announcement; remove it once it's no longer current."
+            fields:
+              - { label: "Unique ID", name: "id", widget: "string", hint: "A short unique name, e.g. open-day-2026. Not shown on the site." }
+              - { label: "Flyer Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string", hint: "Shown over the flyer image, e.g. 'Open Day — 25th October'." }
+              - { label: "Link", name: "link", widget: "string", required: false, hint: "Where the button should go, e.g. /admissions or a news article. Leave blank for no button." }
+              - { label: "Link Button Text", name: "linkLabel", widget: "string", required: false, hint: "Defaults to \"Learn More\" if left blank." }
+
   - name: "gallery"
     label: "Gallery"
     files:
