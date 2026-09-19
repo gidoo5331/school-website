@@ -20,6 +20,7 @@ export default function ProgrammesPage() {
         title="Academic Programmes"
         description={seniorHighOverview.intro}
         category="Classrooms"
+        // src="/images/home-economics-class.jpg"
       />
       <ProgrammesSection />
 

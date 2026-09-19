@@ -86,6 +86,16 @@ collections:
           - { label: "Graduation", name: "Graduation", widget: "image" }
           - { label: "School Bus", name: "School Bus", widget: "image" }
           - { label: "Events", name: "Events", widget: "image" }
+          - { label: "Business", name: "Business", widget: "image" }
+          - { label: "Home Economics", name: "Home Economics", widget: "image" }
+          - { label: "Visual Arts", name: "Visual Arts", widget: "image" }
+          - { label: "General Arts", name: "General Arts", widget: "image" }
+          - { label: "Health", name: "Health", widget: "image" }
+          - { label: "Chapel", name: "Chapel", widget: "image" }
+          - { label: "Leadership", name: "Leadership", widget: "image" }
+          - { label: "Entertainment", name: "Entertainment", widget: "image" }
+          - { label: "Clubs", name: "Clubs", widget: "image" }
+          - { label: "Guidance & Counselling", name: "Guidance & Counselling", widget: "image" }
 
   - name: "staff"
     label: "Staff"
@@ -138,6 +148,34 @@ collections:
               - { label: "Author", name: "author", widget: "string" }
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Published Date", name: "publishedAt", widget: "date", format: "YYYY-MM-DD" }
+
+  - name: "flyers"
+    label: "Home Page Carousel"
+    files:
+      - name: "flyers"
+        label: "Activity Flyers"
+        file: "data/senior-high/flyers.json"
+        fields:
+          - label: "Flyers"
+            name: "flyers"
+            widget: "list"
+            summary: "{{fields.title}}"
+            hint: "Shown as a scrolling carousel on the home page, right below the hero. Add a flyer for each current activity/announcement; remove it once it's no longer current."
+            fields:
+              - { label: "Unique ID", name: "id", widget: "string", hint: "A short unique name, e.g. open-day-2026. Not shown on the site." }
+              - { label: "Flyer Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string", hint: "Shown over the flyer image, e.g. 'Open Day — 25th October'." }
+              - label: "Image Fit"
+                name: "fit"
+                widget: "select"
+                required: false
+                default: "contain"
+                hint: "\"Show whole image\" for a designed poster/flyer with its own text — nothing gets cropped. \"Fill the space\" for an ordinary photo — it fills edge-to-edge but the sides/top may be cropped."
+                options:
+                  - { label: "Show whole image (poster/flyer graphic)", value: "contain" }
+                  - { label: "Fill the space (ordinary photo)", value: "cover" }
+              - { label: "Link", name: "link", widget: "string", required: false, hint: "Where the button should go, e.g. /admissions or a news article. Leave blank for no button." }
+              - { label: "Link Button Text", name: "linkLabel", widget: "string", required: false, hint: "Defaults to \"Learn More\" if left blank." }
 
   - name: "gallery"
     label: "Gallery"

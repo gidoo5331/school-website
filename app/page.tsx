@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/hero";
+import { FlyersCarousel } from "@/components/home/flyers-carousel";
 import { Welcome } from "@/components/home/welcome";
 import { ProgrammesSection } from "@/components/programmes/programmes-section";
 import { WhyChooseUs } from "@/components/home/why-choose-us";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <FlyersCarousel />
       <Welcome />
       <ProgrammesSection />
       <WhyChooseUs />

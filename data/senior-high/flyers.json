@@ -1,0 +1,19 @@
+{
+  "flyers": [
+    {
+      "id": "wassce-pc-2027-first-series",
+      "image": "/images/flyer-wassce-pc-2027-first-series.jpg",
+      "title": "Register Now for 2027 WASSCE (PC) First Series at Obama College, Mankessim",
+      "link": "/admissions",
+      "linkLabel": "Register Now"
+    },
+    {
+      "id": "reporting-date-18-20-sept",
+      "image": "/images/students-group.jpg",
+      "title": "New Semester Reporting Date: 18th – 20th September",
+      "link": "/admissions",
+      "linkLabel": "Admissions Info",
+      "fit": "cover"
+    }
+  ]
+}

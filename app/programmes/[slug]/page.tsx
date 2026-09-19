@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PageHeader } from "@/components/shared/page-header";
+import { PhotoHero } from "@/components/shared/photo-hero";
 import { ChecklistSection } from "@/components/shared/checklist-section";
 import { seniorHighPrograms } from "@/data/senior-high/programs";
 
@@ -29,9 +29,10 @@ export default async function ProgrammePage(props: PageProps<"/programmes/[slug]
 
   return (
     <>
-      <PageHeader
+      <PhotoHero
         title={program.title}
         description={program.overview}
+        category={program.imageCategory}
         breadcrumb={[
           { label: "Programmes", href: "/programmes" },
           { label: program.title },
