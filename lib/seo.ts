@@ -1,4 +1,28 @@
 import { site } from "@/data/site";
+import { getStockImage } from "@/lib/stock-images";
+import type { NewsArticle } from "@/types/news";
+
+export function resolveArticleImage(article: NewsArticle) {
+  return article.image ?? getStockImage(article.imageCategory) ?? `${site.url}/logo.jpeg`;
+}
+
+export function getArticleSchema(article: NewsArticle) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: article.title,
+    description: article.summary,
+    image: resolveArticleImage(article),
+    datePublished: article.publishedAt,
+    author: { "@type": "Person", name: article.author },
+    publisher: {
+      "@type": "Organization",
+      name: site.fullName,
+      logo: { "@type": "ImageObject", url: `${site.url}/logo.jpeg` },
+    },
+    mainEntityOfPage: `${site.url}/news/${article.slug}`,
+  };
+}
 
 export function getSchoolSchema() {
   return {

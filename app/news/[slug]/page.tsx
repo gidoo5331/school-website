@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Tag, User } from "lucide-react";
 import { SiteImage } from "@/components/shared/site-image";
+import { ShareRow } from "@/components/news/share-row";
 import { getAllNews, getNewsBySlug } from "@/lib/news";
+import { getArticleSchema, resolveArticleImage } from "@/lib/seo";
+import { site } from "@/data/site";
 
 export function generateStaticParams() {
   return getAllNews().map((article) => ({ slug: article.slug }));
@@ -15,7 +18,26 @@ export async function generateMetadata(props: PageProps<"/news/[slug]">): Promis
 
   if (!article) return {};
 
-  return { title: article.title, description: article.summary };
+  const image = resolveArticleImage(article);
+
+  return {
+    title: article.title,
+    description: article.summary,
+    alternates: { canonical: `/news/${article.slug}` },
+    openGraph: {
+      type: "article",
+      title: article.title,
+      description: article.summary,
+      publishedTime: article.publishedAt,
+      images: [{ url: image, alt: article.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.summary,
+      images: [image],
+    },
+  };
 }
 
 export default async function NewsArticlePage(props: PageProps<"/news/[slug]">) {
@@ -28,6 +50,10 @@ export default async function NewsArticlePage(props: PageProps<"/news/[slug]">) 
 
   return (
     <article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getArticleSchema(article)) }}
+      />
       <div className="relative aspect-21/9 w-full overflow-hidden">
         <SiteImage
           src={article.image}
@@ -67,6 +93,10 @@ export default async function NewsArticlePage(props: PageProps<"/news/[slug]">) 
           {article.title}
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{article.body}</p>
+
+        <div className="mt-8 border-t border-border pt-6">
+          <ShareRow url={`${site.url}/news/${article.slug}`} title={article.title} />
+        </div>
       </div>
     </article>
   );

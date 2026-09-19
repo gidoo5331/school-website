@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { toast } from "sonner";
 import { Loader2, Send, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,8 +20,15 @@ const contactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
+function encodeFormData(data: Record<string, string>) {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join("&");
+}
+
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -28,13 +36,22 @@ export function ContactForm() {
     reset,
   } = useForm<ContactFormValues>({ resolver: zodResolver(contactSchema) });
 
-  // No backend endpoint exists yet — this simulates a submission so the
-  // form is fully usable end-to-end. Wire up to a real API once available.
   async function onSubmit(values: ContactFormValues) {
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    console.log("Contact form submission (stubbed):", values);
-    setSubmitted(true);
-    reset();
+    setSubmitError(null);
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeFormData({ "form-name": "contact", "bot-field": "", ...values, phone: values.phone ?? "" }),
+      });
+      if (!response.ok) throw new Error(`Submission failed with status ${response.status}`);
+      setSubmitted(true);
+      toast.success("Message sent");
+      reset();
+    } catch {
+      setSubmitError("Something went wrong sending your message. Please try again.");
+      toast.error("Something went wrong — please try again");
+    }
   }
 
   if (submitted) {
@@ -53,7 +70,17 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
+    <form
+      name="contact"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      onSubmit={handleSubmit(onSubmit)}
+      noValidate
+      className="space-y-5"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      {submitError && <p className="text-sm text-destructive">{submitError}</p>}
       <div>
         <Label htmlFor="name">Full Name</Label>
         <Input id="name" {...register("name")} aria-invalid={!!errors.name} className="mt-1.5" />

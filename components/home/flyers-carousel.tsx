@@ -8,7 +8,7 @@ import { SiteImage } from "@/components/shared/site-image";
 import { seniorHighFlyers } from "@/data/senior-high/flyers";
 import { cn } from "@/lib/utils";
 
-const AUTOPLAY_MS = 3000;
+const AUTOPLAY_MS = 2500;
 
 export function FlyersCarousel() {
   const flyers = seniorHighFlyers;
@@ -45,6 +45,7 @@ export function FlyersCarousel() {
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
       onTouchEnd={() => setIsPaused(false)}
+      onTouchCancel={() => setIsPaused(false)}
       onKeyDown={(event) => {
         if (event.key === "ArrowLeft") goTo(index - 1);
         if (event.key === "ArrowRight") goTo(index + 1);

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PhotoHero } from "@/components/shared/photo-hero";
 import { ChecklistSection } from "@/components/shared/checklist-section";
+import { PrintButton } from "@/components/programmes/print-button";
 import { seniorHighPrograms } from "@/data/senior-high/programs";
 
 export function generateStaticParams() {
@@ -29,17 +30,28 @@ export default async function ProgrammePage(props: PageProps<"/programmes/[slug]
 
   return (
     <>
-      <PhotoHero
-        title={program.title}
-        description={program.overview}
-        category={program.imageCategory}
-        breadcrumb={[
-          { label: "Programmes", href: "/programmes" },
-          { label: program.title },
-        ]}
-      />
+      <div className="print:hidden">
+        <PhotoHero
+          title={program.title}
+          description={program.overview}
+          category={program.imageCategory}
+          breadcrumb={[
+            { label: "Programmes", href: "/programmes" },
+            { label: program.title },
+          ]}
+        />
+      </div>
 
-      <div className="py-16">
+      <div className="hidden text-center print:block print:pt-8">
+        <h1 className="font-heading text-2xl font-semibold text-foreground">{program.title}</h1>
+        <p className="mt-1 text-sm text-muted-foreground">{program.overview}</p>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-4 py-4 text-right sm:px-6 lg:px-8 print:hidden">
+        <PrintButton />
+      </div>
+
+      <div className="py-16 print:py-2">
         <ChecklistSection
           eyebrow="Subjects"
           title="Core & Elective Subjects"
@@ -49,7 +61,7 @@ export default async function ProgrammePage(props: PageProps<"/programmes/[slug]
         />
       </div>
 
-      <div className="bg-muted/30 py-16">
+      <div className="bg-muted/30 py-16 print:bg-transparent print:py-2">
         <ChecklistSection
           eyebrow="Careers"
           title="Career Opportunities"
@@ -58,7 +70,7 @@ export default async function ProgrammePage(props: PageProps<"/programmes/[slug]
         />
       </div>
 
-      <div className="py-16">
+      <div className="py-16 print:py-2">
         <ChecklistSection
           eyebrow="Requirements"
           title="Admission Requirements"
