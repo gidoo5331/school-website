@@ -8,11 +8,12 @@
       "linkLabel": "Register Now"
     },
     {
-      "id": "dummy-flyer",
-      "image": "/images/sports-football-trophy.jpg",
-      "title": "Dummy Flyer — Replace Me",
-      "link": "/gallery",
-      "linkLabel": "View Gallery"
+      "id": "reporting-date-18-20-sept",
+      "image": "/images/students-group.jpg",
+      "title": "New Term Reporting Date: 18th – 20th September",
+      "link": "/admissions",
+      "linkLabel": "Admissions Info",
+      "fit": "cover"
     }
   ]
 }

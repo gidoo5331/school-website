@@ -165,6 +165,15 @@ collections:
               - { label: "Unique ID", name: "id", widget: "string", hint: "A short unique name, e.g. open-day-2026. Not shown on the site." }
               - { label: "Flyer Image", name: "image", widget: "image" }
               - { label: "Title", name: "title", widget: "string", hint: "Shown over the flyer image, e.g. 'Open Day — 25th October'." }
+              - label: "Image Fit"
+                name: "fit"
+                widget: "select"
+                required: false
+                default: "contain"
+                hint: "\"Show whole image\" for a designed poster/flyer with its own text — nothing gets cropped. \"Fill the space\" for an ordinary photo — it fills edge-to-edge but the sides/top may be cropped."
+                options:
+                  - { label: "Show whole image (poster/flyer graphic)", value: "contain" }
+                  - { label: "Fill the space (ordinary photo)", value: "cover" }
               - { label: "Link", name: "link", widget: "string", required: false, hint: "Where the button should go, e.g. /admissions or a news article. Leave blank for no button." }
               - { label: "Link Button Text", name: "linkLabel", widget: "string", required: false, hint: "Defaults to \"Learn More\" if left blank." }
 

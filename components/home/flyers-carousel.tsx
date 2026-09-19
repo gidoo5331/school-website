@@ -64,7 +64,7 @@ export function FlyersCarousel() {
                     src={flyer.image}
                     alt={flyer.title}
                     category="Events"
-                    className="object-contain"
+                    className={flyer.fit === "cover" ? "object-cover" : "object-contain"}
                     sizes="100vw"
                     priority={i === 0}
                   />
