@@ -180,7 +180,7 @@ export function Navbar() {
         <DesktopNav pathname={pathname} />
 
         <div className="flex items-center gap-2">
-          <SearchTrigger className="hidden md:inline-flex" />
+          {/* <SearchTrigger className="hidden md:inline-flex" /> */}
           <ThemeToggle className="hidden md:inline-flex" />
           <Button
             render={<Link href="/admissions" />}
@@ -191,7 +191,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-1 md:hidden">
-          <SearchTrigger />
+          {/* <SearchTrigger /> */}
           <ThemeToggle />
           <Sheet>
             <SheetTrigger
