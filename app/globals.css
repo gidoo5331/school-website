@@ -174,3 +174,15 @@
     @apply text-xs font-bold tracking-[0.16em] text-gold uppercase;
   }
 }
+
+@media print {
+  header,
+  footer,
+  [data-whatsapp-button] {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}

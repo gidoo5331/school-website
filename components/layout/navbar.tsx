@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu as MenuIcon } from "lucide-react";
+import { ChevronDown, Menu as MenuIcon, Search } from "lucide-react";
 import { Menu } from "@base-ui/react/menu";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,6 +19,7 @@ import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types/nav";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
+import { useCommandPalette } from "@/components/shared/command-palette-context";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -138,6 +139,21 @@ function MobileNav({ pathname }: { pathname: string }) {
   );
 }
 
+function SearchTrigger({ className }: { className?: string }) {
+  const { setOpen } = useCommandPalette();
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      aria-label="Search"
+      onClick={() => setOpen(true)}
+      className={className}
+    >
+      <Search className="size-5" aria-hidden="true" />
+    </Button>
+  );
+}
+
 export function Navbar() {
   const pathname = usePathname();
 
@@ -164,6 +180,7 @@ export function Navbar() {
         <DesktopNav pathname={pathname} />
 
         <div className="flex items-center gap-2">
+          <SearchTrigger className="hidden md:inline-flex" />
           <ThemeToggle className="hidden md:inline-flex" />
           <Button
             render={<Link href="/admissions" />}
@@ -174,6 +191,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-1 md:hidden">
+          <SearchTrigger />
           <ThemeToggle />
           <Sheet>
             <SheetTrigger

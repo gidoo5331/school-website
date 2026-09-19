@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Obama College, Mankessim — Website
 
-## Getting Started
+Marketing website for Obama College, Mankessim (OBACO), a Day & Boarding Senior High School in Mankessim, Central Region, Ghana. See `CLAUDE.md` for the full technical/content specification.
 
-First, run the development server:
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router), TypeScript
+- Tailwind CSS v4 + [shadcn/ui](https://ui.shadcn.com) (`base-nova` style, built on [Base UI](https://base-ui.com))
+- Framer Motion, React Hook Form + Zod, Lucide React icons
+- Fully static export (`output: "export"` in `next.config.ts`) — no server runtime
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3005](http://localhost:3005) — the dev server runs on port **3005** (see the `dev` script in `package.json`), not the Next.js default of 3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # static export to out/
+npm run lint    # eslint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content
 
-## Learn More
+Nothing is hardcoded inside components. Page content lives in `data/` (e.g. `data/site.ts` for contact/social info, `data/navigation.ts`, `data/senior-high/` for programmes/news/gallery/staff/flyers) and is typed via `types/`. Editing those files is the primary way to update site content; components read from them.
 
-To learn more about Next.js, take a look at the following resources:
+Content can also be edited through **Decap CMS** at `/admin`, backed by the config in `public/admin/config.yml` and gated by **Netlify Identity**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deployed on **Netlify** (`netlify.toml`: `npm run build` → publishes `out/`, Node 20). The contact form is handled by **Netlify Forms**.
 
-## Deploy on Vercel
+### Environment variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Variable | Required | Purpose |
+|---|---|---|
+| `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | No | When set, loads the Plausible analytics script at build time. Leave unset to ship with no analytics. |

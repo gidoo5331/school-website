@@ -33,6 +33,16 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      {/* Static duplicate so Netlify's build-time HTML crawler can detect the
+          "contact" form even though the real one only renders client-side. */}
+      <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <textarea name="message" />
+        <input type="text" name="bot-field" />
+      </form>
     </>
   );
 }

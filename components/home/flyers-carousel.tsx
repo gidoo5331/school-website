@@ -45,6 +45,7 @@ export function FlyersCarousel() {
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
       onTouchEnd={() => setIsPaused(false)}
+      onTouchCancel={() => setIsPaused(false)}
       onKeyDown={(event) => {
         if (event.key === "ArrowLeft") goTo(index - 1);
         if (event.key === "ArrowRight") goTo(index + 1);

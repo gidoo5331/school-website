@@ -5,9 +5,14 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { WhatsappButton } from "@/components/shared/whatsapp-button";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
+import { CommandPaletteProvider } from "@/components/shared/command-palette-context";
+import { CommandPalette } from "@/components/shared/command-palette";
 import { site } from "@/data/site";
 import { getSchoolSchema } from "@/lib/seo";
 import "./globals.css";
+
+const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 
 const poppins = Poppins({
   variable: "--font-heading",
@@ -75,10 +80,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             src="https://identity.netlify.com/v1/netlify-identity-widget.js"
             strategy="beforeInteractive"
           />
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsappButton />
+          <CommandPaletteProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <WhatsappButton />
+            <Toaster />
+            <CommandPalette />
+          </CommandPaletteProvider>
           <Script id="netlify-identity-redirect" strategy="afterInteractive">
             {`
               if (window.netlifyIdentity) {
@@ -88,6 +97,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               }
             `}
           </Script>
+          {plausibleDomain && (
+            <Script
+              defer
+              data-domain={plausibleDomain}
+              src="https://plausible.io/js/script.js"
+              strategy="afterInteractive"
+            />
+          )}
         </ThemeProvider>
       </body>
     </html>

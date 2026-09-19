@@ -30,16 +30,16 @@ export function ChecklistSection({
       />
       <ul
         className={cn(
-          "mt-10 grid gap-3",
+          "mt-10 grid gap-3 print:mt-4 print:gap-1.5",
           columns === 1 && "mx-auto max-w-xl",
-          columns === 2 && "sm:grid-cols-2",
-          columns === 3 && "sm:grid-cols-2 lg:grid-cols-3",
+          columns === 2 && "sm:grid-cols-2 print:grid-cols-2",
+          columns === 3 && "sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-2",
         )}
       >
         {items.map((item) => (
           <li
             key={item}
-            className="flex items-start gap-2.5 rounded-lg bg-muted/30 p-3 text-sm text-foreground"
+            className="flex items-start gap-2.5 rounded-lg bg-muted/30 p-3 text-sm text-foreground print:bg-transparent print:p-1"
           >
             <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" aria-hidden="true" />
             {item}

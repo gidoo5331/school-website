@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { PhotoGrid } from "@/components/shared/photo-grid";
+import { GalleryLightbox } from "@/components/gallery/gallery-lightbox";
 import { cn } from "@/lib/utils";
 import type { GalleryImage, GalleryCategory } from "@/types/gallery";
 
@@ -18,6 +19,7 @@ const categories: GalleryCategory[] = [
 
 export function GalleryFilter({ images }: { images: readonly GalleryImage[] }) {
   const [active, setActive] = useState<GalleryCategory | "All">("All");
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const availableCategories = useMemo(
     () => categories.filter((category) => images.some((image) => image.imageCategory === category)),
@@ -29,12 +31,17 @@ export function GalleryFilter({ images }: { images: readonly GalleryImage[] }) {
     [images, active],
   );
 
+  function selectCategory(category: GalleryCategory | "All") {
+    setActive(category);
+    setLightboxIndex(null);
+  }
+
   return (
     <div>
       <div className="flex flex-wrap gap-2">
         <button
           type="button"
-          onClick={() => setActive("All")}
+          onClick={() => selectCategory("All")}
           className={cn(
             "rounded-full px-4 py-1.5 text-sm font-medium transition-colors",
             active === "All"
@@ -48,7 +55,7 @@ export function GalleryFilter({ images }: { images: readonly GalleryImage[] }) {
           <button
             key={category}
             type="button"
-            onClick={() => setActive(category)}
+            onClick={() => selectCategory(category)}
             className={cn(
               "rounded-full px-4 py-1.5 text-sm font-medium transition-colors",
               active === category
@@ -61,11 +68,23 @@ export function GalleryFilter({ images }: { images: readonly GalleryImage[] }) {
         ))}
       </div>
 
-      <PhotoGrid images={filtered} className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" />
+      <PhotoGrid
+        images={filtered}
+        className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+        onImageClick={setLightboxIndex}
+      />
 
       {filtered.length === 0 && (
         <p className="mt-8 text-center text-sm text-muted-foreground">No photos in this category yet.</p>
       )}
+
+      <GalleryLightbox
+        images={filtered}
+        index={lightboxIndex ?? 0}
+        open={lightboxIndex !== null}
+        onOpenChange={(open) => !open && setLightboxIndex(null)}
+        onIndexChange={setLightboxIndex}
+      />
     </div>
   );
 }

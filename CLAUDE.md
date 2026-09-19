@@ -5,7 +5,7 @@
 **Framework:** Next.js 15+ (App Router)
 **Language:** TypeScript
 **Styling:** Tailwind CSS + shadcn/ui
-**Deployment:** Vercel
+**Deployment:** Netlify (static export via `netlify.toml`, Netlify Identity for `/admin` auth, Decap/Netlify CMS for content editing)
 **Version:** 1.0 (Static Website)
 **Architecture:** Static First → Database Ready
 
