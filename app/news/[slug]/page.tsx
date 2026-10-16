@@ -92,7 +92,13 @@ export default async function NewsArticlePage(props: PageProps<"/news/[slug]">) 
         <h1 className="mt-4 font-heading text-3xl font-semibold text-foreground sm:text-4xl">
           {article.title}
         </h1>
-        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{article.body}</p>
+        <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
+          {article.body.split(/\n\s*\n/).map((paragraph, index) => (
+            <p key={index} className="whitespace-pre-line">
+              {paragraph}
+            </p>
+          ))}
+        </div>
 
         <div className="mt-8 border-t border-border pt-6">
           <ShareRow url={`${site.url}/news/${article.slug}`} title={article.title} />
