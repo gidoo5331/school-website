@@ -4,3 +4,13 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/news/shs-mock-wassce-begins/"
+  to = "/news/shs-mock-begins/"
+  status = 301
+
+[[redirects]]
+  from = "/news/shs-mock-wassce-begins"
+  to = "/news/shs-mock-begins/"
+  status = 301

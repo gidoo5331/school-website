@@ -6,6 +6,7 @@ import { getAllNews } from "@/lib/news";
 export const metadata: Metadata = {
   title: "News",
   description: "Latest news and updates from Obama College Senior High School.",
+  alternates: { canonical: "/news/" },
 };
 
 export default function NewsPage() {

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about Obama College, Mankessim — a Free SHS school founded in 2009 — its history, vision, mission, and the values guiding our work.",
+  alternates: { canonical: "/about/" },
 };
 
 export default function AboutPage() {

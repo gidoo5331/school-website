@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Programmes",
   description:
     "General Arts, Business, Home Economics, and Visual Arts at Obama College Senior High School, each with WASSCE-focused teaching and career guidance.",
+  alternates: { canonical: "/programmes/" },
 };
 
 export default function ProgrammesPage() {
