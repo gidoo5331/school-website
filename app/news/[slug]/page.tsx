@@ -23,7 +23,7 @@ export async function generateMetadata(props: PageProps<"/news/[slug]">): Promis
   return {
     title: article.title,
     description: article.summary,
-    alternates: { canonical: `/news/${article.slug}` },
+    alternates: { canonical: `/news/${article.slug}/` },
     openGraph: {
       type: "article",
       title: article.title,

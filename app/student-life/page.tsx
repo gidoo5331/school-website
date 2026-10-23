@@ -7,6 +7,7 @@ import { seniorHighOverview } from "@/data/senior-high/overview";
 export const metadata: Metadata = {
   title: "Student Life",
   description: "Sports, clubs, boarding, and student leadership opportunities at Obama College.",
+  alternates: { canonical: "/student-life/" },
 };
 
 export default function StudentLifePage() {

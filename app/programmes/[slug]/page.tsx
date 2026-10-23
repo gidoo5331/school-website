@@ -17,7 +17,11 @@ export async function generateMetadata(
 
   if (!program) return {};
 
-  return { title: program.title, description: program.overview };
+  return {
+    title: program.title,
+    description: program.overview,
+    alternates: { canonical: `/programmes/${program.slug}/` },
+  };
 }
 
 export default async function ProgrammePage(props: PageProps<"/programmes/[slug]">) {

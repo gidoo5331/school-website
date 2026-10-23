@@ -7,6 +7,7 @@ import { ContactForm } from "@/components/contact/contact-form";
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Get in touch with Obama College — address, phone, email, and a contact form.",
+  alternates: { canonical: "/contact/" },
 };
 
 export default function ContactPage() {

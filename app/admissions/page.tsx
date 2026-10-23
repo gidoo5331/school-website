@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Admissions",
   description:
     "How to gain admission to Obama College, Mankessim through the CSSPS, what Free SHS covers, prospectus downloads, key dates, and fees.",
+  alternates: { canonical: "/admissions/" },
 };
 
 export default function AdmissionsPage() {

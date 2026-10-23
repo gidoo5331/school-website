@@ -40,9 +40,6 @@ export const metadata: Metadata = {
     "SHS Central Region",
     "boarding school Ghana",
   ],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_GH",

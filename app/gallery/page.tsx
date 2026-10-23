@@ -8,6 +8,7 @@ const allImages = seniorHighGallery;
 export const metadata: Metadata = {
   title: "Gallery",
   description: "Photos of campus life, classrooms, sports, and events at Obama College.",
+  alternates: { canonical: "/gallery/" },
 };
 
 export default function GalleryPage() {
